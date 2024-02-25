@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+</head>
+<body>
+
+ 
+<h1>Jeu de devinette</h1>
+<p>Devinez un nombre entre 1 et 100</p>
+<p id="message"></p>
+<div id="form">
+    <form>
+       
+        <input type="number" id="input">
+        <button id="button" type="submit
+        ">Go</button>
+    </form>
+</div>
+<div id="link"><a href="page1.html">Recommencer</a></div>
+</div>
+</section>
+
+<script>
+var button = document.getElementById('button');
+var form = document.getElementById('form');
+var message = document.getElementById('message');
+var link = document.getElementById('link');
+
+const secretNumber = Math.floor(Math.random() * 100);
+var attempts = 10;
+
+button.onclick = function() {
+var input = parseInt(document.getElementById("input").value);
+if (!isNaN(input)) {
+    if (input < secretNumber) {
+        message.innerText = 'Le nombre est plus grand que ' + input;
+        message.style.color = "black";
+    } else if (input > secretNumber) {
+        message.innerText = 'Le nombre est plus petit que ' + input;
+        message.style.color = "black";
+    }
+    attempts--;
+    if (attempts === 0) {
+        message.innerText = "Vous avez perdu, il fallait trouver " + secretNumber;
+        message.style.color = "red";
+        form.style.display = 'none';
+        link.style.display = 'flex';
+    }
+    if (input === secretNumber) {
+        message.innerText = "Bravo, vous avez trouvé le nombre qui est " + secretNumber + '!';
+        message.style.color = "green";
+        form.style.display = 'none';
+        link.style.display = 'flex';
+    }
+} else {
+    message.innerText = "Le champ est vide ou non valide !";
+    message.style.color = "red";
+}
+}
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div id="search">
+    <input type="text" id="text"placeholder="Rechercher un Mot">
+    <button onclick="search()">search</button>
+
+</div>
+<div id="result">
+
+</div>
+</div>
+</section>
+<script>
+function search(){
+var word = document.getElementById("text").value;
+var result =document.getElementById("result");
+
+if(word.length != 0){
+let url =  "https://api.dictionaryapi.dev/api/v2/entries/en/ "+ word;
+fetch(url).then(Response=>response.json().then(data =>{
+try{
+for(var words of data){
+var definition = words.meanings[0].definitions[0].definition
+result.innerHTML= "<p class='res'><span>Definition</span><br>"+definition +"</p>"
+}
+}catch(err){
+result.innerHTML ="<p class='res'> Aucun definition Trouvée! </p>"
+}
+}))
+
+
+
+
+}else{
+result.innerHTML= "<p class='res'> veuillez remplir ce champ ! </p>";
+}
+}
+</script>
+<!--tarif web : page tethal f navigateur
+fama zouz anwe3 web front inline-end
+frond interface mobile desktop : requet lel back html css js (evolution sarett framework : html hadher css hahder tekhdho hahder testamlo)
+html: balise (elements button text )sans design noir et blanc
+css: styling (height width)
+html +css web statique maytbadloush kima thothm talqahm 
+js: twali fama haja dynamique (image tateha date tateha fonction tnjm tamlha tetbadel bl waqt )
+back end serveur : yabath les informations ay haja notlboha mawjouda ando
+back php c++ python java naseno behom back end serveur (framework environnement hadher fama express yasnaa serveur ala base js , nest talaa barsha zedaa)
+back 3 partie : base de donnes api : traitement : serveur howa l ylemhom :serveur js nestamloh f angular f react :
+api : application programming interface : aana fichier fih des entétes fih des metadonnées : fihom asemi yormzo lel fuction (kima fonction andha entete nqolo titre )
+devloppeur yhb yaml fonction  tatih liste just yaytelha b entete mteeha tnjm tconsomeha mnghir mtarf heya kifeh tetkhdem
+deliver data to devices 
+react library js : pour frond end , page web ,client peut interagir :il suffit talemna js nekhdmo bih
+o fih community kbira o open source , tnjm tetalmo aady mlowl , extenson js o notion jsx, js xml ts xml farq binethom tsx thot var tnajmsh tbadel ama js tnjm tbadel
+combinaision deux code f js just jsx nektbo code html f js wla tsx
+rreact yekhdm f virtual DOM k nbadlo hja f interface tetbadel avec virtual Dom document   model tbadel page kol o theshsh beha khtr sri3a
+o real tbadel element ml pages kima button mathalan
+bsh tsob react lezm tsob node js qbal
+https://nodejs.org/en/download/
+https://react.dev/
+https://fr.legacy.reactjs.org/
+npm create vite@latest (commande)
+<li class="checked"> Task 1</li>
+<li> Task 2</li>
+<li> Task 3</li>

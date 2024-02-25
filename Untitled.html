@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de devinette</title>
+    <Link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="Untitled-.js"></script>
+    <section class="contai">
+        <div class="cardcont">
+            <a name="proj"></a>
+
+
+            <article class="cardart">
+                <img src="dev.jpg" alt="deviner" class="cardimg">
+                <div class="caddata">
+                    <span class="carddescription">Jeu de devinette</span>   
+                <h2>Devinez un nombre entre 1 et 100</h2>
+            <p id="message"></p>
+                <form id="guessForm">
+                    <input type="number" id="input" placeholder="Deviner le nombre">
+                    <button id="button" type="submit">Go</button>
+                </form>
+            </div>
+            <div id="link" style="display: none;"><a href="page1.html">Recommencer</a></div>
+            </article>
+        
+            <article class="cardart">
+                <img src="dic.jpg" alt="study" class="cardimg">
+                <div class="caddata"  id="search"> 
+                    <span class="carddescription"> ask about any thing”</span>
+                        <input type="text" id="text" placeholder="Rechercher un Mot">
+                        <button onclick="search()">Rechercher</button>
+                    
+                    <div id="result">      
+                </div></div>
+            </article>
+
+        
+    
+    <div class="container1">
+        <div class="todo">
+            <h2><i class="fa fa-list-alt" aria-hidden="true"></i> To-Do-List </h2>
+            <div class="row">
+                <input type="text" id="input" placeholder="Add your task">
+                <button onclick="addTask()">Add</button>
+                
+            </div>
+    <ul id="listcon">
+          
+            </ul>
+            
+        </div>
+    </div></div> </section>
+    <script src="../JS/sc.js"></script>
+    </body>
+    </html>
+
+    <!---<div class="container4">
+        <div class="project">
+            <article class="cardart">
+            <h1>Jeu de devinette</h1>
+            <div class="card"  >
+                <p>Devinez un nombre entre 1 et 100</p>
+            <p id="message"></p>
+                <form id="guessForm">
+                    <input type="number" id="input">
+                    <button id="button" type="submit">Go</button>
+                </form>
+            </div>
+            <div id="link" style="display: none;"><a href="page1.html">Recommencer</a></div>
+        </article> </div>
+    </div>
+         
+    </section>
+    <section>
+        <div id="search">
+            <input type="text" id="text" placeholder="Rechercher un Mot">
+            <button onclick="search()">Rechercher</button>
+        </div>
+        <div id="result"></div>
+    </section>
+    
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* Les styles que vous avez déjà fournis */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    background: pink;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin: 1.5rem;
+    padding: 5rem 0;
+    grid-template-columns: auto;
+}
+
+.cardcont {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.cardart {
+    position: relative;
+    overflow: hidden;
+    margin-right: 60px;
+}
+
+.cardimg {
+    height: 400px;
+    width:900px;
+    border-radius: 1.5rem;
+}
+
+.caddata {
+    width: 300px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 7rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+}
+
+.carddescription {
+    display: block;
+    font-size: larger;
+    margin-bottom: .25rem;
+}
+
+.cardbutton {
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: 500;
+    color: rgba(10, 9, 9, 0.603);
+}
+
+.cardbutton:hover {
+    text-decoration: underline;
+}
+
+.cardart:hover .caddata {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.cardart:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.cardart:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.cardart:not(:hover) .caddata {
+    animation: remove-data 1s forwards;
+}
+
+@media screen and (max-width: 340px) {
+    .container {
+        margin: 1rem;
+    }
+
+    .caddata {
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cardcont {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container {
+        height: 100vh;
+    }
+
+    .cardcont {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardimg {
+        width: 348px;
+    }
+
+    .caddata {
+        width: 316px;
+        padding-inline: 2rem;
+        margin: auto;
+    }
+}
+
+.container1{
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 600px;
+    background: pink;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
+.todo h2{
+color: #4e085f;
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+.todo h2 i{
+      
+    margin: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    color: black;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+#input{
+    color: black;
+    flex: 1;
+    
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:  #4e085f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 12px ;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+     height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    top: 12px;
+    left: 4px;
+}
+  ul li.checked{
+    color: #1a1919;
+    text-decoration: line-through;
+}
+ 
+ul li span{
+    right: 0;
+top :5px;
+width: 40px;
+height:40px;
+font-size: 20px;
+color: black;
+line-height: 20px;
+text-align: left;
+border-radius:50% ;
+}
+ ul li span:hover{
+    background: pink;
+    
+ }
+ 
+ .fa.fa-times {
+    margin-left: 40px;}
